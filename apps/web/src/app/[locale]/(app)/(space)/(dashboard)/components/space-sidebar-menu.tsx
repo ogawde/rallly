@@ -1,6 +1,5 @@
 "use client";
 
-import { Icon } from "@rallly/ui/icon";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -29,9 +28,7 @@ export function SpaceSidebarMenu() {
                     <SidebarMenuItem key={item.id}>
                       <SidebarMenuButton asChild isActive={item.isActive}>
                         <HoverPrefetchLink href={item.href}>
-                          <Icon>
-                            <item.icon />
-                          </Icon>
+                          <item.icon />
                           {item.label}
                         </HoverPrefetchLink>
                       </SidebarMenuButton>
