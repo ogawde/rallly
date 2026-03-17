@@ -64,6 +64,7 @@
 
 .rbc-header.rbc-today {
   color: var(--color-rose-500);
+  background-color: transparent;
 }
 
 .rbc-button-link {

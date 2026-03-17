@@ -127,8 +127,8 @@ const WeekCalendar: React.FunctionComponent<DateTimePickerProps> = ({
             // biome-ignore lint/suspicious/noExplicitAny: Fix this later
             header: function Header({ date }: any) {
               return (
-                <span className="w-full rounded-md text-center text-sm tracking-tight">
-                  <span className="mr-1.5 font-normal opacity-50">
+                <span className="w-full rounded-md text-center text-xs tracking-tight">
+                  <span className="mr-1.5 font-normal">
                     {dayjs(date).format("ddd")}
                   </span>
                   <span className="font-medium">
