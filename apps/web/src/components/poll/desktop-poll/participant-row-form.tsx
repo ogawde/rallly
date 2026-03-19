@@ -1,6 +1,5 @@
 import { cn } from "@rallly/ui";
 import { Button } from "@rallly/ui/button";
-import { Icon } from "@rallly/ui/icon";
 import {
   Tooltip,
   TooltipContent,
@@ -65,7 +64,7 @@ const ParticipantRowForm = ({
             {name ? (
               <OptimizedAvatarImage
                 name={participantName}
-                size="sm"
+                size="md"
                 email={email}
               />
             ) : (
@@ -82,11 +81,9 @@ const ParticipantRowForm = ({
                     onClick={() => {
                       form.cancel();
                     }}
-                    size="sm"
+                    size="icon-sm"
                   >
-                    <Icon>
-                      <UndoIcon />
-                    </Icon>
+                    <UndoIcon />
                   </Button>
                 </TooltipTrigger>
                 <TooltipPortal>
