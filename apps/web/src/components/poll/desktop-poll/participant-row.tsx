@@ -2,8 +2,7 @@ import type { VoteType } from "@rallly/database";
 import { cn } from "@rallly/ui";
 import { Badge } from "@rallly/ui/badge";
 import { Button } from "@rallly/ui/button";
-import { Icon } from "@rallly/ui/icon";
-import { MoreVerticalIcon } from "lucide-react";
+import { MoreHorizontalIcon } from "lucide-react";
 import type * as React from "react";
 
 import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
@@ -145,9 +144,7 @@ const ParticipantRow: React.FunctionComponent<ParticipantRowProps> = ({
             onEdit={() => onChangeEditMode?.(true)}
           >
             <Button size="icon-xs" variant="ghost">
-              <Icon>
-                <MoreVerticalIcon />
-              </Icon>
+              <MoreHorizontalIcon />
             </Button>
           </ParticipantDropdown>
         ) : null
