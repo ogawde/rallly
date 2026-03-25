@@ -210,8 +210,10 @@ function DiscussionInner() {
                         </div>
                         {canDelete && (
                           <DropdownMenu>
-                            <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground">
-                              <MoreVerticalIcon className="size-4" />
+                            <DropdownMenuTrigger asChild>
+                              <Button variant="ghost" size="icon-xs">
+                                <MoreVerticalIcon />
+                              </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="start">
                               <DropdownMenuItem
