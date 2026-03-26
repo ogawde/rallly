@@ -278,8 +278,7 @@ const DesktopPoll: React.FunctionComponent = () => {
                 {canAddNewParticipant && mode !== "new" ? (
                   <Button
                     className="ml-2"
-                    size="icon"
-                    variant="ghost"
+                    size="icon-xs"
                     data-testid="add-participant-button"
                     onClick={() => {
                       votingForm.newParticipant();
