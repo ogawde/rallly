@@ -86,7 +86,9 @@ const PollHeader = () => {
             key={`${group.month} ${group.year}`}
             colSpan={group.count}
             style={{ height: monthRowHeight }}
-            className={cn("sticky top-0 z-10 border-l bg-background text-left")}
+            className={cn(
+              "sticky top-0 z-10 border-b border-l bg-background text-left",
+            )}
           >
             <div className="sticky right-0 left-[236px] inline-flex h-5 gap-1 px-2 py-0.5 font-medium text-xs uppercase">
               <span>{group.month}</span>
@@ -118,7 +120,7 @@ const PollHeader = () => {
                 top: monthRowHeight,
               }}
               className={cn(
-                "sticky space-y-2 border-t bg-background",
+                "sticky space-y-2 bg-background",
                 firstOfDay ? "z-20" : "z-10",
                 {
                   "border-l": firstOfDay,

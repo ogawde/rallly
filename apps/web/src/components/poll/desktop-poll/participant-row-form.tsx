@@ -57,7 +57,7 @@ const ParticipantRowForm = ({
     <tr className={cn("group", className)}>
       <td
         style={{ minWidth: 235, maxWidth: 235 }}
-        className="sticky left-0 z-10 h-12 border-b bg-background px-3 group-[.last-row]:border-b-0"
+        className="sticky left-0 z-10 h-12 border-b border-b-border-muted bg-background px-3 group-[.last-row]:border-b-0"
       >
         <div className="flex items-center justify-between gap-x-2.5">
           <Participant>
@@ -109,7 +109,7 @@ const ParticipantRowForm = ({
         return (
           <td
             key={optionId}
-            className="relative h-12 border-b border-l bg-background group-[.last-row]:border-b-0"
+            className="relative h-12 border-b border-b-border-muted border-l bg-background group-[.last-row]:border-b-0"
           >
             <Controller
               control={form.control}
@@ -126,7 +126,7 @@ const ParticipantRowForm = ({
                   }}
                   className={cn(
                     "absolute inset-0 flex cursor-pointer items-center justify-center transition-colors",
-                    "hover:bg-gray-100 active:bg-gray-200/50 active:ring-1 active:ring-gray-200 active:ring-inset dark:active:bg-gray-700/50 dark:active:ring-gray-700 dark:active:ring-inset dark:hover:bg-gray-800",
+                    "hover:bg-gray-50 active:bg-gray-100 active:ring-1 active:ring-gray-200 active:ring-inset dark:active:bg-gray-700/50 dark:active:ring-gray-700 dark:active:ring-inset dark:hover:bg-gray-800",
                   )}
                 >
                   <VoteSelector
@@ -141,7 +141,6 @@ const ParticipantRowForm = ({
           </td>
         );
       })}
-      <td className="border-l" />
     </tr>
   );
 };
