@@ -42,14 +42,7 @@ export const getCurrentUserSpace = async () => {
       lastSelectedAt: "desc",
     },
     include: {
-      space: {
-        select: {
-          id: true,
-          name: true,
-          ownerId: true,
-          tier: true,
-        },
-      },
+      space: true,
     },
   });
 
@@ -63,10 +56,7 @@ export const getCurrentUserSpace = async () => {
   return {
     user,
     space: createSpaceDTO({
-      id: spaceMember.space.id,
-      ownerId: spaceMember.space.ownerId,
-      name: spaceMember.space.name,
-      tier: spaceMember.space.tier,
+      ...spaceMember.space,
       role: spaceMember.role,
     }),
   };
