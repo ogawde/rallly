@@ -119,6 +119,9 @@ pnpm sherif               # Check package dependencies
 - Use `pnpm test:unit` to run
 - Test files co-located with source code
 
+## Git Commits
+Always use gitmoji prefixes in commit messages. Follow the gitmoji convention (https://gitmoji.dev) for the type of change (e.g. `📝` docs, `♻️` refactor, `🐛` fix, `✨` feature).
+
 ## Code Standards
 
 ### Styling
