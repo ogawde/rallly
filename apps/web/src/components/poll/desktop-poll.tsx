@@ -248,7 +248,7 @@ const DesktopPoll: React.FunctionComponent = () => {
             )}
             ref={containerRef}
           >
-            <CardHeader className="flex items-center justify-between gap-4">
+            <CardHeader className="flex items-center justify-between gap-4 border-b">
               <div className="flex items-center gap-x-2.5">
                 <CardTitle>
                   <Trans i18nKey="participants" />
@@ -313,7 +313,7 @@ const DesktopPoll: React.FunctionComponent = () => {
                       "scrollbar-thin dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800 hover:scrollbar-thumb-gray-400 dark:hover:scrollbar-thumb-gray-500 scrollbar-thumb-gray-300 scrollbar-track-gray-100 relative z-10 h-full min-h-0 grow overflow-auto overscroll-x-none",
                     )}
                   >
-                    <table className="w-full table-auto border-separate border-spacing-0 bg-muted/50">
+                    <table className="w-full table-auto border-separate border-spacing-0">
                       <thead>
                         <PollHeader />
                       </thead>
