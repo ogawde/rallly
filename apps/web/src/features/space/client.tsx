@@ -51,17 +51,19 @@ export function SpaceProvider({ children }: { children: React.ReactNode }) {
       posthog?.group("space", space.id, {
         name: space.name,
         tier: space.tier,
+        custom_branding_enabled: space.showBranding,
       });
     }
-  }, [posthog, space?.id, space?.name, space?.tier]);
+  }, [posthog, space?.id, space?.name, space?.tier, space?.showBranding]);
 
   if (!space) {
     return <RouterLoadingIndicator />;
   }
 
-  const primaryColorVars = space.primaryColor
-    ? getPrimaryColorVars(space.primaryColor)
-    : null;
+  const primaryColorVars =
+    space.showBranding && space.primaryColor
+      ? getPrimaryColorVars(space.primaryColor)
+      : null;
 
   return (
     <>
