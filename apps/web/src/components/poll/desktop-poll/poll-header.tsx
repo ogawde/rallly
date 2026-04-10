@@ -130,7 +130,7 @@ const PollHeader = () => {
             key={`${group.year}-${group.month}-${group.day}`}
             colSpan={group.count}
             style={{ height: dayRowHeight, top: monthRowHeight }}
-            className="border-l bg-background"
+            className="sticky z-10 border-l bg-background"
           >
             <div
               style={{ width: `calc(100% / ${group.count})` }}
