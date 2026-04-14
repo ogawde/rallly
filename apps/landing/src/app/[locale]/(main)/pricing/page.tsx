@@ -1,4 +1,4 @@
-import { TrendingUpIcon } from "lucide-react";
+import { BirdIcon } from "lucide-react";
 import Link from "next/link";
 import { Trans } from "react-i18next/TransWithoutContext";
 
@@ -151,12 +151,10 @@ export default async function Page(props: {
         <PriceTables />
       </section>
       <section>
-        <div className="flex flex-col gap-4 rounded-md border border-cyan-800/10 bg-linear-to-b from-cyan-50 to-cyan-50/60 p-4 text-cyan-800 shadow-xs sm:flex-row sm:gap-6 sm:p-5">
+        <div className="relative flex flex-col gap-4 overflow-hidden rounded-xl bg-blue-400/10 p-4 pr-36 text-blue-800 ring ring-black/5 ring-inset sm:flex-row sm:gap-6">
+          <BirdIcon className="absolute -top-4 right-8 size-24 opacity-20" />
           <div>
-            <TrendingUpIcon className="size-6" />
-          </div>
-          <div>
-            <h3 className="mb-2 font-bold text-sm">
+            <h3 className="font-medium text-sm">
               <Trans
                 t={t}
                 ns="pricing"
@@ -164,7 +162,7 @@ export default async function Page(props: {
                 defaults="Upgrade now, save later"
               />
             </h3>
-            <p className="text-sm">
+            <p className="mt-1 text-sm opacity-75">
               <Trans
                 t={t}
                 ns="pricing"
