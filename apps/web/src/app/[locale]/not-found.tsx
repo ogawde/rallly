@@ -19,7 +19,10 @@ export default async function NotFoundPage() {
           "Sorry, we couldn't find the page you're looking for. Here are some helpful links instead.",
       })}
       actions={
-        <Link href="/" className={buttonVariants({ variant: "primary" })}>
+        <Link
+          href="/"
+          className={buttonVariants({ size: "lg", variant: "primary" })}
+        >
           {t("errorBackToHome", { defaultValue: "Back to home" })}
         </Link>
       }

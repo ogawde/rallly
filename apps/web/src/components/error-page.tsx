@@ -34,20 +34,18 @@ export function ErrorPage({
           height={30}
           className="mx-auto hidden dark:block"
         />
-        <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
+        <div className="mx-auto mt-16 max-w-2xl text-center">
           <p className="font-semibold text-base/8 text-primary">{label}</p>
-          <h1 className="mt-4 text-balance font-semibold text-5xl text-foreground tracking-tight sm:text-6xl">
+          <h1 className="mt-4 text-balance font-semibold text-3xl text-foreground tracking-tight sm:text-5xl">
             {title}
           </h1>
-          <p className="mt-6 text-pretty text-lg text-muted-foreground sm:text-xl/8">
+          <p className="mt-6 text-pretty text-muted-foreground text-xl">
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-16 flow-root max-w-lg sm:mt-20">
-          <ul className="-mt-6 divide-y divide-border border-border border-b">
-            {children}
-          </ul>
-          <div className="mt-10 flex items-center justify-center gap-x-4">
+        <div className="mx-auto mt-16 flow-root max-w-lg">
+          <ul className="grid">{children}</ul>
+          <div className="mt-16 flex items-center justify-center gap-x-4">
             {actions}
           </div>
         </div>
@@ -68,8 +66,8 @@ export function ErrorPageLinkItem({
   description: React.ReactNode;
 }) {
   return (
-    <li className="relative flex gap-x-6 py-6">
-      <div className="flex size-10 flex-none items-center justify-center rounded-lg border border-border bg-card">
+    <li className="relative flex gap-x-6 rounded-xl p-4 hover:bg-accent">
+      <div className="flex size-12 flex-none items-center justify-center self-center rounded-lg border border-border bg-card shadow-xs">
         {icon}
       </div>
       <div className="flex-auto">
@@ -79,7 +77,7 @@ export function ErrorPageLinkItem({
             {title}
           </Link>
         </h3>
-        <p className="mt-1 text-muted-foreground text-sm/6">{description}</p>
+        <p className="mt-0.5 text-muted-foreground text-sm/6">{description}</p>
       </div>
       <div className="flex-none self-center">
         <ChevronRightIcon
